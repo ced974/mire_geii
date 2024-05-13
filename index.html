@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="charset=UTF-8" />
+
+  <title>Mire BUT GEII Villeurbanne</title>
+
+  <!-- Icone de la page -->
+  <link rel="icon" type="image/png" href="image/logo_geii.svg" />
+
+  <!-- Style -->
+  <link rel="stylesheet" href="style/style.css" />
+
+  <!-- Police d'écriture  -->
+  <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+
+  <!-- Vanilla Tilt, effet de carte qui bouge -->
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="accueil">
+      <img id="iconGEII" src="new_image/GEII_ICON.png">
+      <h1>BUT GEII<br>
+        <span id="name"> Mire Étudiant</span>
+      </h1>
+    </div>
+  </header>
+
+  <div class="Matrice"></div>
+
+  <footer>
+    <!-- Possibilité de mettre des infos -->
+    <div class="Settings">
+      <button id="colorSetting" onclick="gestionSettings('colorSetting')">
+        <img src="./new_image/palette-peinture.png">
+      </button>
+      <label for="btnReset">Choix couleur</label>
+    </div>
+
+    <div class="colorPalette">
+      <input type="color" id="color1" class="color" value="#f08505" />
+      <input type="color" id="color2" class="color" value="#f9d547" />
+      <button id="btnReset" onclick="ResetColor()">
+        <img src="./new_image/reset.png">
+      </button>
+      <button id="retourSetting" onclick="gestionSettings('retourSetting')">
+        <img src="./new_image/retourSetting.png">
+      </button>
+      <label for="color1">Color 1</label>
+      <label for="color2">Color 2</label>
+      <label for="reset">Reset</label>
+      <label for="retourSetting">Retour</label>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+	user-select: none;
+}
+
+/* Couleur par défaut */
+:root {
+	--color1: #f08505;
+	--color2: #f9d547;
+}
+
+/* HEAD */
+.accueil {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: auto;
+	margin-right: 60px; /* A retirer si vous souhaitez centrer l'entièreté */
+}
+
+#iconGEII {
+	align-self: flex-start; /* Aligne l'image en haut du conteneur */
+	height: 75px;
+	width: 75px;
+	margin-top: 30px; /* Déplace l'image horizontalement */
+}
+
+body {
+	display: grid;
+	place-items: center;
+	font-family: "Merienda", cursive;
+	text-align: center;
+	overflow-x: hidden; /* hide scrollbars on page */
+	animation: pulse 10s infinite;
+	animation-timing-function: ease-out;
+}
+
+.colorPalette {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0%);
+
+	display: grid;
+	grid-template-columns: repeat(4, 1fr); /* Nombre Colonne */
+
+	align-items: center;
+	text-align: center;
+
+	background: rgba(255, 255, 255, 0.45);
+	backdrop-filter: blur(0.1px);
+	box-shadow: 0 0 1rem grey;
+	padding: 0.5rem;
+	border-radius: 5px;
+
+	height: auto;
+	width: fit-content;
+	gap: 10px;
+
+	font-family: "Merienda", cursive;
+
+	opacity: 0;
+	visibility: hidden;
+}
+
+.Settings {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0%);
+
+	display: grid;
+	grid-template-columns: repeat(1, 1fr); /* Nombre Colonne */
+
+	align-items: center;
+	text-align: center;
+
+	background: rgba(255, 255, 255, 0.45);
+	backdrop-filter: blur(0.1px);
+	box-shadow: 0 0 1rem grey;
+	padding: 0.5rem;
+	border-radius: 5px;
+
+	height: auto;
+	width: fit-content;
+	gap: 10px;
+
+	font-family: "Merienda", cursive;
+}
+
+button:hover img {
+	transform: scale(1.2);
+}
+
+footer {
+	margin-bottom: 125px; /* Ajoutez la marge inférieure souhaitée */
+}
+
+.color {
+	width: 50px;
+	height: 50px;
+	background-color: transparent;
+	cursor: pointer;
+	border-radius: 15px;
+	border: none;
+}
+.color:hover {
+	transform: scale(1.2);
+}
+.color::-webkit-color-swatch {
+	border-radius: 15px;
+	border: none;
+}
+
+#btnReset,
+#colorSetting,
+#retourSetting {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+#btnReset img,
+#colorSetting img,
+#retourSetting img {
+	margin-top: 10px;
+	height: 45px;
+	width: 45px;
+}
+
+/* Fond de couleur animé */
+@keyframes pulse {
+	0%,
+	100% {
+		background-color: var(--color1);
+	}
+	50% {
+		background-color: var(--color2);
+	}
+}
+
+img {
+	width: 100%;
+	height: 100%;
+}
+
+h1 > span {
+	color: #ffffff;
+}
+
+/* MAIN */
+.Matrice {
+	width: auto;
+	height: auto;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center; /* Aligne les éléments sur l'axe X au centre */
+	align-items: center; /* Aligne les éléments sur l'axe Y au centre */
+}
+
+.Element {
+	width: 150px;
+	height: 150px;
+	margin: 25px; /* Ajoutez une marge entre les éléments pour l'espace */
+	margin-bottom: 55px; /* Ajoutez une marge entre les éléments pour l'espace */
+
+	background: rgba(255, 255, 255, 0.15);
+	backdrop-filter: blur(10px);
+
+	box-shadow: 0 0 1rem grey;
+	padding: 1rem;
+
+	border-radius: 5px;
+	list-style-type: none;
+}
+
+.Element h4 {
+	display: grid;
+	color: #030303;
+	background: rgba(255, 255, 255, 0.25);
+	backdrop-filter: blur(10px);
+	font-family: "Merienda", normal;
+	border-radius: 5px;
+	opacity: 1;
+}
