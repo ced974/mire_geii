@@ -119,7 +119,7 @@ function fetchData() {
 			{
 				titre: "Gitlab",
 				url: "https://forge.univ-lyon1.fr/",
-				img: "./new_image/Gitlab.png",
+				img: "./new_image/GitLab.png",
 				display: true,
 			},
 			{
